@@ -19,11 +19,11 @@ int main()
 		A = x * x + 1;
 		if (x < 4)
 			B = 4 * pow(x, 7) - pow(x, 5) + pow(x, 3) - 2;
-		if (x >= 4 || x < 7)
-			B = atan((abs(x) + 1) / 2) + 8.3 * x;
-		if (x >= 1)
-			B = log(2 * x + exp(4 * x + 1));
-			
+		else
+			if (x >= 7)
+				B = log(abs(2 * x + exp(4 * x + 1)));
+			else
+				B = atan(abs((x)+1) / 2) + 8.3 * x;
 		y = A + B;
 		cout << "|" << setw(7) << setprecision(2) << x
 			<< " |" << setw(10) << setprecision(3) << y
